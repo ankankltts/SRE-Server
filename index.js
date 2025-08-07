@@ -1,10 +1,12 @@
 import express from "express";
 import axios from "axios";
 import dotevn from "dotenv";
+import cors from "cors";
 
 dotevn.config();
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 const BASE_URL = process.env.PPBASE_URL;
